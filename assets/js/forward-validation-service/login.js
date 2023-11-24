@@ -17,6 +17,7 @@ const loginForwarder = async (emailInput, passwordInput, markErrElem, language, 
     if (loginRequest.ok) {
         const loginResponse = await loginRequest.json();
         console.log(document.cookie);
+        return
         if (loginResponse === 'invalid') markErrElem.current.firstChild.textContent = languageData.errors.invalidCredentials[language];
         else {
             sharedRegister(true);
