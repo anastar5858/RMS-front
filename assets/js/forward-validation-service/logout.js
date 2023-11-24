@@ -1,5 +1,5 @@
 const logOut = async (setVerify, language) => {
-    const logOutRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/logout', {
+    const logOutRequest = await fetch('http://localhost:8080/api/logout', {
         method: 'GET',
         credentials: 'include',
     });

@@ -1,5 +1,5 @@
 const verifyToken = async (setVerify) => {
-    const verifyRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/verify', {
+    const verifyRequest = await fetch('http://localhost:8080/api/verify', {
         method: 'GET',
         credentials: 'include',
     });
