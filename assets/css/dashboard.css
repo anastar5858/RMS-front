@@ -1,0 +1,260 @@
+/* request form styles */
+#request-from {
+    width: fit-content;
+    margin: auto;
+}
+.sec-flex {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.sec-flex-column {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+#pen-check, #prog-check, #comp-check, #request-crawler, #photo-mode, #ar, #en {
+    display: block;
+}
+textarea {
+    border-radius: 1rem;
+    text-align: center;
+    background: linear-gradient(rgb(255,250,250)
+    , rgb(211,211,211));
+}
+#request-btn {
+    text-align: center;
+}
+input[type="radio"] {
+    display: none;
+  }
+.radio-container {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 2rem; 
+}
+.radio-dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #ccc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: background-color 0.3s ease;
+    margin-left: 0.5rem;
+  }
+#pending:checked + .radio-dot, #pending-manage + .radio-dot {
+    background-color: #db6c34;
+}
+#progress:checked + .radio-dot, #progress-manage + .radio-dot  {
+    background-color: #badb34;
+}
+#completed:checked + .radio-dot, #completed-manage + .radio-dot  {
+    background-color: #34db82; 
+}
+#pending:disabled + .radio-dot {
+    background-color: #db6c34;
+}
+#in-progress:disabled + .radio-dot {
+    background-color: #badb34;
+}
+#completed:disabled + .radio-dot {
+    background-color: #34db82; 
+}
+.plain-surface {
+    box-shadow: inset -1rem -1rem 1rem 2rem rgb(245, 241, 241);
+    background-color: rgb(255, 253, 253);
+}
+/* manage requests page css */
+#fly:checked + .radio-dot {
+    background-color: gold;
+}
+#rocket:checked + .radio-dot {
+    background-color: gold;
+}
+#default:checked + .radio-dot {
+    background-color: gold; 
+}
+#prev:checked + .radio-dot {
+    background-color: blanchedalmond; 
+}
+#next:checked + .radio-dot {
+    background-color: blanchedalmond; 
+}
+#all:checked + .radio-dot {
+    background-color: aquamarine; 
+}
+#mine:checked + .radio-dot {
+    background-color: aquamarine; 
+}
+.label {
+    margin-top: 1rem;
+}
+
+details > summary {
+    padding: 0.2px;
+    width: fit-content;
+    background-color: #eeeeee;
+    border: none;
+    box-shadow: 0.2rem 0.2rem 0.2rem #bbbbbb;
+    cursor: pointer;
+}
+details > label {
+    margin-top: 1rem;
+}
+/* no animation rules */
+#ellipse-plain, #ellipse, #ellipse-rocket {
+    margin: 1rem auto 0 auto;
+    width: 20vw;
+    height: 90vh;
+    border: 1rem solid rgb(245, 241, 241);
+    border-radius: 100%;
+    position: relative;
+    box-shadow: inset -1rem -1rem 1rem rgb(245, 241, 241);
+    background-color: rgb(219, 211, 211);
+}
+/* card design starts here */
+#request-title {
+    border-radius: 10%;
+    border: 0.2rem black solid;
+    text-align: center;
+    max-width: 50%;
+    word-break: break-all;
+    margin: 5rem auto 1rem auto;
+    text-decoration:double;
+    background-color: rgb(208, 199, 199);
+}
+#request-desc {
+    text-align: center;
+    max-width: 70%;
+    max-height: 20%;
+    overflow-y: scroll;
+    word-break: break-all;
+    margin: 3rem auto 1rem auto;
+    background-color: rgb(202, 201, 201);   
+}
+#request-status {
+    width: fit-content;
+    display: block;
+    margin: 3rem auto 1rem auto;
+    background-color: rgb(181, 179, 179);   
+}
+small {
+    margin: 3rem auto 1rem auto;
+    width: fit-content;
+    display: block;
+}
+#creator-sign {
+    background-color: rgb(250, 250, 250);   
+    margin-left: 10%;
+}
+#date-sign {
+    margin-top: 3rem;
+    margin-right: 10%;
+    background-color: rgb(255, 255, 255);   
+}
+#live-edit-status {
+    width: fit-content;
+    background-color: rgb(249, 241, 241);   
+}
+/* card design ends here */
+/* request card animation section */
+
+
+/* rocket animation */
+#rocketCount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}  
+.line-container {
+    position: absolute;
+    top: 12vh;
+    left: 50%;
+    width: 8vw;
+    height: 0.2rem;
+    background-color: #ee4444;
+    transform-origin: 0% 0%;
+}
+.fireCloud {
+    position: absolute;
+    top: -8vh;
+    left: calc(50% - 10vw);
+    width: 20vw;
+    height: 5rem;
+    background-color: orangered;
+    transform-origin: 0% 0%;
+    border-radius: 100%;
+}
+
+/* fly animation  */
+#ellipse::before,
+#ellipse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 5vw;
+  height: 60vh;
+  border: 0.2rem solid black;
+  border-radius: 100%;
+  background-color: red; 
+}
+
+#ellipse::before {
+    visibility: hidden;
+    animation: wingPosition2 2s 1 forwards, 
+    wingSwiftLeft 2s infinite forwards 1s;    
+    left: -5vw;
+  }
+
+  #ellipse::after {
+    visibility: hidden;
+    animation: wingPosition 2s 1 forwards, 
+    wingSwiftRight 2s infinite forwards 1s;
+    right: -20.5vw;
+  }
+
+
+/* responsive design rules >>>>>>>>>>>>>>>>>. */
+@media only screen and (max-width: 1234px) {
+    #ellipse-plain, #ellipse, #ellipse-rocket {
+        width: 30vw;
+    } 
+    /* fly */
+    /* fly animation  */
+    #ellipse::before { 
+        animation: wingPosition3 2s 1 forwards, 
+        wingSwiftLeft1 2s infinite forwards 1s; 
+      }
+    
+      #ellipse::after {
+        animation: wingPosition4 2s 1 forwards, 
+        wingSwiftRight1 2s infinite forwards 1s; 
+      }
+}
+@media only screen and (max-width: 520px) {
+    #ellipse-plain, #ellipse, #ellipse-rocket {
+        width: 70vw;;
+    }
+    /* fly */
+    /* fly animation  */
+    #ellipse::before { 
+        animation: wingPosition5 2s 1 forwards, 
+        wingSwiftLeft2 2s infinite forwards 1s; 
+      }
+    
+      #ellipse::after {
+        animation: wingPosition6 2s 1 forwards, 
+        wingSwiftRight2 2s infinite forwards 1s; 
+      }
+}
+

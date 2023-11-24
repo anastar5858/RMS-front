@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/utilities/language/fetchData.js" type="text/babel" defer></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="../js/utilities/animation/requestAnimationHandler.js" type="text/babel" defer></script>
+    <script src="../js/utilities/language/fetchData.js" type="text/babel" defer></script>
+    <script src="../js/forward-validation-service/logout.js" type="text/babel" defer></script>
+    <script src="../js/forward-validation-service/verify.js" type="text/babel" defer></script>
+    <script src="../js/forward-request-service/create.js" type="text/babel" defer></script>
+    <script src="../js/forward-request-service/manage.js" type="text/babel" defer></script>
+    <script src="../../view/dashboard/dashboardRouter.js" type="text/babel" defer></script>
+    <script src="../../view/navbar.js" type="text/babel" defer></script>
+    <script src="../../view/footer.js" type="text/babel" defer></script>
+    <script src="../../assets/js/forward-demo-service/fetchDemo.js" type="text/babel" defer></script>
+    <script src="../../view/dashboard/dashboard-components/createForm.js" type="text/babel" defer></script>
+    <script src="../../view/dashboard/dashboard-components/manageView.js" type="text/babel" defer></script>
+    <link rel="stylesheet" href="../css/animation.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/demo.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <canvas id="demo-display" style='display:none; position: fixed; z-index: 4;'></canvas>
+    <header id="navabar-verify"></header>
+    <!-- this will include the create form and the view all requests cards components as well as unauthorized view-->
+    <!-- for unauthorized show the message asking the user to re-log in and log out using hte logout client controller logout.js -->
+    <main id="dashboard"></main>
+    <footer id="footer"></footer>
+</body>
+<script src="../js/dashboard.js" type="text/babel" defer></script>
+</html>

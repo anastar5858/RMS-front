@@ -1,0 +1,248 @@
+{
+    "direction": {
+        "ar": "rtl",
+        "en": "ltr"
+    },
+    "navbar": {
+        "login": {
+            "ar": "تسجيل دخول",
+            "en": "Log in"
+        },
+        "register": {
+            "ar": "سوي حساب جديد",
+            "en": "Register"
+        },
+        "logoText": {
+            "ar": "تحدي نظام إدارة الطلبات",
+            "en": "Request Management System Challenge"
+        },
+        "language": {
+            "ar": "لغتك" ,
+            "en": "Language"
+        },
+        "logout": {
+            "ar": "سجل خروجك يا مدير",
+            "en": "Logout"
+        },
+        "create": {
+            "ar": "طلب جديد اخخخخ" ,
+            "en": "New Request"
+        },
+        "manage": {
+            "ar": "در مشاريعك",
+            "en": "Manage Requests"
+        }
+    },
+    "register": {
+        "emailPlaceholder": {
+            "ar": "الإيميل",
+            "en": "Email"
+        },
+        "passwordPlaceholder": {
+            "ar": "الباس لحد يدري",
+            "en": "Password"
+        },
+        "compliance": {
+            "ar": "قواعد الباس",
+            "en": "Password Compliance Rules"
+        },
+        "passwordRule1": {
+            "ar": "أطول من 8 تكفى",
+            "en": "Longer then 8 characters"
+        },
+        "passwordRule2": {
+            "ar": "حطلنا رمز و حرف كبير و حرف صغير انجليزي على ذوقك",
+            "en": "At least 1 capital letter, 1 number, 1 symbol"
+        },
+        "passwordRule3": {
+            "ar": "طلبتك لا يبدأ و لا ينتهي بالرقم (ما أحب الرياضيات)",
+            "en": "Not starting or ending with a number"
+        },
+        "registerBtn": {
+            "ar": "توكلنا على الله",
+            "en": "Register"
+        }
+    },
+    "login": {
+        "emailPlaceholder": {
+            "ar": "الإيميل",
+            "en": "Email"
+        },
+        "passwordPlaceholder": {
+            "ar": "الباس لحد يدري",
+            "en": "Password"
+        },
+        "loginBtn": {
+            "ar": "دز",
+            "en": "Login"
+        }
+    },
+    "create": {
+        "titlePlaceholder": {
+            "ar": "العنوان (زبد)",
+            "en": "Title"
+        },
+        "descPlaceholder": {
+            "ar": "الوصف لا تكثره بالله",
+            "en": "Description"
+        },
+        "pending": {
+            "ar": "موقف",
+            "en": "Pending"
+        },
+        "inProgress": {
+            "ar": "قيد التنفيذ",
+            "en": "In-progress"
+        },
+        "completed": {
+            "ar": "مخلص",
+            "en": "Completed"
+        },
+        "autoBack": {
+            "ar": "نضيف لك خلفية؟",
+            "en": "Auto Background?"
+        },
+        "addBtn": {
+            "ar": "إضافة وبالتوفيق",
+            "en": "Add"
+        }
+    },
+    "manage": {
+        "animOptions": {
+            "ar": "خيارات الانيميشن: (جربها)",
+            "en": "Animation Options:"
+        },
+        "noComplexAnim": {
+            "ar": "انيميشن بسيط",
+            "en": "No Complex Animation"
+        },
+        "flyAnim": {
+            "ar": "انيميشن الذبابة أو التجديف",
+            "en": "Fly/Rowing Animation"
+        },
+        "rocketAnim": {
+            "ar": "انيميشن الصاروخ (الله يصبرك)",
+            "en": "Rocket Animation"
+        },
+        "navigation": {
+            "ar": "الملاحة",
+            "en": "Navigation:"
+        },
+        "prev": {
+            "ar": "الطلب السابق",
+            "en": "Previous"
+        },
+        "next": {
+            "ar": "الطلب التالي",
+            "en": "Next"
+        },
+        "filter": {
+            "ar": "الفلترة",
+            "en": "Filter:"
+        },
+        "all": {
+            "ar": "الكل",
+            "en": "All"
+        },
+        "mine": {
+            "ar": "تبعي",
+            "en": "My Requests"
+        },
+        "photoMode": {
+            "ar": "تشوف الخلفية اللي جبناها؟",
+            "en": "Enable Photo Mode?"
+        },
+        "basedOn": {
+            "ar": "بناء على",
+            "en": "Based On State:"
+        },
+        "createdBy": {
+            "ar": "اللي حطها الله يهديه و يهدينا",
+            "en": "Created By:"
+        }, 
+        "createdOn": {
+            "ar": "بتاريخ",
+            "en": "Created On:"
+        },
+        "editStatus": {
+            "ar": "غير الحالة على مسووليتك",
+            "en": "Edit the status:"
+        }
+    },
+    "footer": {
+        "helpBtbHide": {
+            "ar": "بطلت",
+            "en": "Hide help demo"
+        },
+        "helpBtbUnhide": {
+            "ar": "مساعدة يالذيبان؟",
+            "en": "Help demos"
+        },
+        "listText": {
+            "ar": "هذه المساعدات اللي وضعها المطور عاد تفاهم معه",
+            "en": "This is the list of website features demonstrations"
+        },
+        "reviewBtn": {
+            "ar": "شغلها",
+            "en": "Review This Demo"
+        }, 
+        "quizQuestion": {
+            "ar": "عشان نتأكد إيش لازم تسوي هنا",
+            "en": "Select what action should you do to this element"
+        },
+        "quizClick": {
+            "ar": "أضغط",
+            "en": "Click"
+        }, 
+        "quizInput": {
+            "ar": "أكتب",
+            "en": "Input/Write"
+        }
+    }, 
+    "errors": {
+        "emailInvalid": {
+            "ar": "إيميلك خطأ يالغالي",
+            "en": "Invalid Email"
+        },
+        "emailEmpty": {
+            "ar": "ناسي الإيميل ياعسل",
+            "en": "Empty Email"
+        },
+        "alreadyRegistered": {
+            "ar": "مسجل من قبل",
+            "en": "Already Registered"
+        },
+        "invalidCredentials": {
+            "ar": "تأكد من معلوماتك", 
+            "en": "Invalid Credentials"
+        }, 
+        "missingInput": {
+            "ar": "بيانات مفقودة",
+            "en": "Missing Input"
+        }, 
+        "noProcess": {
+            "ar": "لم نستطع المعالجة. جرب تعيد التسجبل الله لا يهينك",
+            "en": "'Could not process. Check input ot try re-logging!'"
+        }
+    }, 
+    "success": {
+        "accountCreated": {
+            "ar": "تم",
+            "en": "Done"
+        }, 
+        "requestCreated": {
+            "ar": "تم الله يقويك",
+            "en": "success"
+        }
+    },
+    "states": {
+        "loading": {
+            "ar": "جار المعالجة",
+            "en": "Processing"
+        },
+        "serverError": {
+            "ar": "خطأ في السيرفر",
+            "en": "Server Error"
+        }
+    }
+}
