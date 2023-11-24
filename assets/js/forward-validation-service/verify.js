@@ -1,5 +1,5 @@
 const verifyToken = async (setVerify) => {
-    const verifyRequest = await fetch('http://localhost:8080/api/verify', {
+    const verifyRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/verify', {
         method: 'GET',
         credentials: 'include',
     });
@@ -9,7 +9,7 @@ const verifyToken = async (setVerify) => {
             setVerify(true);
         } else {
             setVerify(false)
-            window.location.replace("http://localhost:5500/index.html");
+            window.location.replace("https://anastar5858.github.io/RMS-front/index.html");
         }
     } else {
         // todo: handle server error

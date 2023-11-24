@@ -32,7 +32,7 @@ const validateDemo = (title, url, demoElementsList) => {
 }
 
 const sendToServerController = async (payload) => {
-    const demoRequest = await fetch('http://localhost:8080/api/create-demo', {
+    const demoRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/create-demo', {
         method: 'POST',
         credentials: 'include',
         headers: {

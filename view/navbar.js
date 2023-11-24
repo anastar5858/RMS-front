@@ -19,7 +19,7 @@ const Navbar = (props) => {
     React.useEffect(() => {
       if (registered && !props.loggedIn) {
         verifyToken(setVerify);
-        window.location.replace(`http://localhost:5500/assets/html/protected.html?lan=${language}`);
+        window.location.replace(`https://anastar5858.github.io/RMS-front/ssets/html/protected.html?lan=${language}`);
       } else if (props.loggedIn) {
         verifyToken(setVerify);
       }
