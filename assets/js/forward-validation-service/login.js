@@ -10,6 +10,7 @@ const loginForwarder = async (emailInput, passwordInput, markErrElem, language, 
         credentials: 'include',
         headers: {
             'content-type': 'application/json',
+            'Cookie': `${'wadafdf'}`
         },
         body: JSON.stringify(payload),
     });
