@@ -7,9 +7,9 @@ const loginForwarder = async (emailInput, passwordInput, markErrElem, language, 
     }
     const loginRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/login', {
         method: 'PATCH',
+        credentials: 'include',
         headers: {
             'content-type': 'application/json',
-            'cookie': `${'wadafdf'}`
         },
         body: JSON.stringify(payload),
     });
