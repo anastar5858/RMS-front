@@ -13,8 +13,6 @@ const loginForwarder = async (emailInput, passwordInput, markErrElem, language, 
         },
         body: JSON.stringify(payload),
     });
-    console.log(loginRequest.headers.get('Set-Cookie'));
-    return
     loginBtn.textContent = Object.keys(languageData).length > 0 ? languageData.login.loginBtn[language] : '';
     if (loginRequest.ok) {
         const loginResponse = await loginRequest.json();
