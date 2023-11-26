@@ -33,6 +33,7 @@ const Register = (props) => {
             </li>
         </ul>
         <button id='regsiter-btn'onAnimationStart={() => {
+            console.log('executed')
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
             if (hamburgerMenu && hamburgerMenu2) {
