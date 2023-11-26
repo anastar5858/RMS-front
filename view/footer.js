@@ -101,7 +101,6 @@ const Footer = () => {
                         instructionMsg.current.style.removeProperty('white-space');
                         instructionMsg.current.style.display = 'none';
                         target.parentElement.classList.remove('position-relative');
-                        console.log('ummmm', instructionMsg.current.style.display, instructionMsg.current);
                         resolve('step finished');
                     }, 1500);
                 }, 1000);
@@ -194,7 +193,6 @@ const Footer = () => {
             }, 1000 * 1.5)
             }
         }
-        console.log()
     return (
         <>
             <button id='demo-btn' onClick={ () => setDemosVisualiser((prev) => !prev)} style={{bottom: '0', position: 'fixed', left: `${language === 'en' ? 0 : ''}`, right: `${language === 'ar' ? 0 : ''}`,}}> {!demosVisualiser ? Object.keys(languageData).length > 0 ? languageData.footer.helpBtbUnhide[language] : '' : Object.keys(languageData).length > 0 ? languageData.footer.helpBtbHide[language] : '' }</button>

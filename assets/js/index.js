@@ -14,6 +14,5 @@
     const underline = document.createElement('hr')
     underline.style.width = `${e.currentTarget.textContent.length}ch`;
     underline.classList.add('underline')    
-    // console.log(e.currentTarget.appendChild, clone)
     e.currentTarget.appendChild(underline);
   }

@@ -1,6 +1,5 @@
 const Register = (props) => {
     const language = props.language
-    console.log(language);
     const [password, setPassword] = React.useState('');
     const [passwordValidator, setPasswordValidator] = React.useState({long: false, chacractersLimit: false, startEndNo: false});
     const emailRef = React.useRef(null);

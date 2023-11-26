@@ -13,7 +13,6 @@ const DemoForm = () => {
             setElementsCountArr(arr);
         }
         if (elementsCount === '0') {
-            console.log(elementsCount);
             setElementsCountArr([]);
         } 
     }, [elementsCount])

@@ -6,7 +6,6 @@ const fetchAllDemos = async (setListOfDemo) => {
     });
     if (demosResponse.ok) {
         const data = await demosResponse.json();
-        console.log(data)
         setListOfDemo(data);
     } else {
         // todo: handle server error
