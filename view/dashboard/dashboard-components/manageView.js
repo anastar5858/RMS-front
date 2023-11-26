@@ -1,24 +1,17 @@
 const ManageView = (props) => {
-    //Object.keys(languageData).length > 0 ? languageData.manage.quizQuestion[language] : ''
     const language = props.language
-    console.log(language);
     const cardContainerRef = React.useRef(null);
     const [request, setRequests] = React.useState([]);
     const [cardMode, setCardMode] = React.useState('default');
     const [indexCounter, setIndexCounter] = React.useState(0);
     const [currentRequest, setCurrentRequest] = React.useState({});
-    // for filtering
     const allFilterRef = React.useRef(null);
     const userFilterRef = React.useRef(null);
     const [filter, setFilter] = React.useState('all');
     const [statusFilter, setStatusFilter] = React.useState([]);
-    // for updating the status live
     const [status, setStatus] = React.useState('');
-    // for checking if the current displayed card belongs to the logged in user
     const [isOwner, setIsOwner] = React.useState(false);
-    // for deleting the current request
     const [deleteIndicator, setDeleteIndicator] = React.useState(false);
-    // for photo display feature
     const [displayPhoto, setDisplayPhoto] = React.useState(false);
     const [currentRequestHasPhoto, setCurrentRequestHasPhoto] = React.useState(false);
     const [languageData, setLanguageData] = React.useState({});
@@ -72,10 +65,8 @@ const ManageView = (props) => {
         disableStatusCheckboxes()
         if (statusFilter.length > 0) disableOtherFilter();
         if (statusFilter.length === 0) enableOtherFilter()
-        // check the status filter
     }, [indexCounter, statusFilter]);
     React.useEffect(() => {
-        // setting the current filter
         if (request.length > 0) {
             setCurrentRequest(request[indexCounter]);
         }
@@ -131,7 +122,6 @@ const ManageView = (props) => {
   return (
     <>
     <div className='flex-row plain-surface' style={{margin: '1rem 0 1rem 0', flexWrap: 'wrap'}}>
-    {/* animation mode switchers */}
     <section id='animation-section-container' className='flex-column w-center plain-surface p-1' style={{marginTop: '1rem', marginBottom: '1rem'}} dir={Object.keys(languageData).length > 0 ? languageData.direction[language] : ''}>
         <strong>{Object.keys(languageData).length > 0 ? languageData.manage.animOptions[language] : ''}</strong>
         <label id='default-demo' className="radio-container label" htmlFor='default'>
@@ -150,7 +140,6 @@ const ManageView = (props) => {
             <span className="radio-dot"></span> 
         </label>
     </section>
-    {/* navigation system */}
     <section id='navigation-section-container' className='flex-column w-center plain-surface p-1' style={{marginTop: '1rem'}} dir={Object.keys(languageData).length > 0 ? languageData.direction[language] : ''}>
         <strong>{Object.keys(languageData).length > 0 ? languageData.manage.navigation[language] : ''}</strong>
         <label id='prev-demo' className="radio-container label" htmlFor='prev'>
@@ -171,7 +160,6 @@ const ManageView = (props) => {
             <span className="radio-dot"></span>                 
         </label>  
     </section>
-    {/* requests filter */}
     <section className='flex-column w-center plain-surface p-1' style={{marginTop: '1rem', marginBottom: '1rem'}} dir={Object.keys(languageData).length > 0 ? languageData.direction[language] : ''}>
         <strong>{Object.keys(languageData).length > 0 ? languageData.manage.filter[language] : ''}</strong>
         <label id='all-demo' className="radio-container label" htmlFor='all'>
@@ -248,16 +236,13 @@ const ManageView = (props) => {
             }} type='checkbox' id='comp-check' value='completed'></input>
         </details>
     </section>
-    {/* background photo mode */}
     <section className='flex-column w-center plain-surface p-1' style={{marginTop: '1rem'}} >
         <label id='photo-mode-demo' className="label" htmlFor='photo-mode'>
             <strong>{Object.keys(languageData).length > 0 ? languageData.manage.photoMode[language] : ''}</strong>
             <input  onClick={(e) => e.currentTarget.checked ? setDisplayPhoto(true) : setDisplayPhoto(false)}  id='photo-mode' className='middle' type='checkbox' name='photo-mode'></input>
         </label>
     </section>
-    {/* end of main div */}
     </div>
-    {/* the three card view */}
     <div ref={cardContainerRef} id="cardContainer">
         <div id={cardMode === 'default' ? 'ellipse-plain' : cardMode === 'rocket' ? 'ellipse-rocket' : 'ellipse'}>
             {Object.keys(currentRequest).length > 0 && (
@@ -273,7 +258,6 @@ const ManageView = (props) => {
                     </em>
                     <small id='creator-sign' dir={Object.keys(languageData).length > 0 ? languageData.direction[language] : ''} className='p-1'>{Object.keys(languageData).length > 0 ? languageData.manage.createdBy[language] : ''}<br />{currentRequest.creator}</small>
                     <small id='date-sign' dir={Object.keys(languageData).length > 0 ? languageData.direction[language] : ''} className='p-1'>{Object.keys(languageData).length > 0 ? languageData.manage.createdOn[language] : ''}<br />{new Date(currentRequest.date).toLocaleDateString()}</small>
-                    {/* live edit a request */}
                     <strong id='live-edit-status' className='flex-column' dir={Object.keys(languageData).length > 0 ? languageData.direction[language] : ''}>
                         <p>{Object.keys(languageData).length > 0 ? languageData.manage.editStatus[language] : ''}</p>
                         <label className="radio-container" htmlFor='pending-manage'>
@@ -293,7 +277,6 @@ const ManageView = (props) => {
                         </label>
                         {isOwner && (<button id='delete-request-btn' onClick={(e) => deleteRecord(currentRequest, setDeleteIndicator, e.currentTarget)}>Delete</button>)}
                     </strong>
-                    {/* rendered only if the currently viewed request card belongs to the signed in user */}
                 </>
             )}
         </div>

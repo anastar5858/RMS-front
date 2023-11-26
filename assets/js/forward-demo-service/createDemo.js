@@ -21,7 +21,6 @@ const validateDemo = (title, url, demoElementsList) => {
         object.message = messageInput.value.trim();
         demoElementsArray.push(object);
     }
-    // foward to server side (deep validation)
     const payload = {
         title: titleTrimmed,
         url: urlTrimmed,

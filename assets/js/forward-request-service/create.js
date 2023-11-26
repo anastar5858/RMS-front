@@ -1,10 +1,7 @@
 const validateRequestInput = async (titleInput, descriptionTextBox, initialStatus, button, checked, language, languageData) => {
     const title = titleInput.current.value.trim();
     const desc = descriptionTextBox.current.value.trim();
-    // client-side validation
-    // no empty data
     if (title === '' || desc === '' || initialStatus === '') return btnErrorHandler(languageData.errors.missingInput[language], 'error', button);
-    // forward to server after validations
     const payload = {
         title,
         desc,

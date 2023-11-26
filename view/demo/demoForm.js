@@ -5,7 +5,6 @@ const DemoForm = () => {
     const [elementsCount, setElementsCount] = React.useState(0);
     const [elementsCountArr, setElementsCountArr] = React.useState([]);
     React.useEffect(() => {
-        // max 10
         if (elementsCount <=10 && elementsCount > 0) {
             const arr = [];
             for (let i = 1; i <= elementsCount; i++) {

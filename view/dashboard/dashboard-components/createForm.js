@@ -1,6 +1,5 @@
 const CreateForm = (props) => {
     const language = props.language
-    console.log(language);
     const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     const titleRef = React.useRef(null);
     const descriptionRef = React.useRef(null);

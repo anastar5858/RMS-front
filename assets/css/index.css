@@ -16,7 +16,6 @@ body {
     margin: 0;
     font-size:medium;
 }
-/* colors  */
 .primary{
     padding: 1rem;
     background-color: #DCDCDC;
@@ -33,7 +32,6 @@ body {
     background-repeat: no-repeat, no-repeat;
     background-position: 100% 0%, 0% 0%;
     background-size: 50% 100%, 0%;  
-    /* transform: scaleX(-1); */
 }
 .surface::before {
     content: '';
@@ -49,7 +47,6 @@ body {
     background-size: 50% 100%;
     transform: scaleX(-1);
   }
-/* general rules */
 details > summary {
   padding: 0.2px;
   width: fit-content;
@@ -91,7 +88,6 @@ ul > * {
 mark {
     background-color: rgba(255, 232, 232, 0.356);  
 }
-/* class selectors rules  */
 .w-center {
     width: fit-content;
     margin: auto;
@@ -129,19 +125,16 @@ mark {
 .p-1 {
     padding: 0.2rem;
 }
-/* id selectors rules */
 #pass-val-sten, #pass-val-long, #pass-val-limit  {
     display: block !important;
     animation: none;
 }
-/* animations section */
 button:hover {
     background: linear-gradient(90deg, white, gold);
-    background-size: 200% 100%; /* Make sure the background is twice as wide as the button */
+    background-size: 200% 100%;
     animation: buttonSmoothFill 1s infinite alternate !important;
 }
 
-/* reponsive media queries */
 input[type="checkbox"] {
     display: none;
 }
@@ -153,7 +146,6 @@ input[type="checkbox"] {
     z-index: 2;
   }
   .menudiv {
-    /* display: none; */
     display: block;
     position: relative;
   }
@@ -170,7 +162,6 @@ input[type="checkbox"] {
     pointer-events: auto;
   }
   
-  /* testing hamburger menu */
   .the-menu > li {
     text-decoration: none;
     color: black;
@@ -198,7 +189,6 @@ input[type="checkbox"] {
     align-items: flex-end;
     background-color: #DCDCDC;
   } 
-  /* animate the scroll in */
   #menu-toggle2:checked ~ .the-menu {
     position: fixed;
     top: 6vh;
@@ -219,7 +209,6 @@ input[type="checkbox"] {
   #menu-toggle2:checked + .menu-icon {
     display: none;
   }
-  /* animate the scroll out */
   #menu-toggle:checked ~ .the-menu {
     animation: slideOut 0.5s linear forwards !important;
   }

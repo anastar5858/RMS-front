@@ -1,15 +1,11 @@
 const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare, index) => {
-    // no animation should happen in these cases
     if (lengthToCompare === 0) {
         if (index - 1 < 0) return
     }
     if (lengthToCompare !== 0) {
         if (index + 1 > lengthToCompare) return
     }
-    // next and prev radio buttons
     disableNavigation();
-    // event listeners of animation endings
-    // default
     const defaultEvent = () => {
         cardContainer.current.style.animation = 'none';
         enableNavigation();
@@ -21,10 +17,8 @@ const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare,
             setIndexCounter(index < lengthToCompare ? index + 1 : index)    
         }
     }
-    // rocket
     const rocketEvent = () => {
         const cardContainer =  document.getElementById('cardContainer')
-        // revert all added configurations
         unhideElements()
         const countHeader = document.getElementById('rocketCount');
         if (countHeader) countHeader.remove();
@@ -44,7 +38,6 @@ const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare,
             setIndexCounter(index < lengthToCompare ? index + 1 : index)    
         }
     }
-    // fly
     const flyEvent = () => {
         const style = document.createElement('style');
         document.head.appendChild(style);
@@ -71,24 +64,18 @@ const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare,
         }
     }
 
-    // only translation is applied
     if (mode === 'default') {
         hideElements();
         cardContainer.current.style.animation = 'translateY 3s 1';
         cardContainer.current.addEventListener('animationend', defaultEvent);
     }
-    // rocket animation
     if (mode === 'rocket') {
-        // make all content invisible
         hideElements();
-        // add the counter header
         const counter = document.createElement('h1');
         counter.id = 'rocketCount';
         counter.textContent = '1';
         cardContainer.current.appendChild(counter);
-        // make the card container position relative
         cardContainer.current.style.position = 'relative';
-        // add the clip path
         document.getElementById('ellipse-rocket').style.clipPath = 'polygon(50% 18%, 100% 15%, 100% 100%, 0 100%, 0 15%)';
         let count = 0;
         let degrees = -10
@@ -98,7 +85,6 @@ const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare,
             if (count === 9) {
                 count = 0;
                 degrees = -10;
-                // show the cloud and translate
                 const cloud = document.createElement('div');
                 cloud.classList.add('fireCloud');
                 cardContainer.appendChild(cloud);
@@ -120,7 +106,6 @@ const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare,
         }
         requestAnimationFrame(prepareRocketLaunch);
     }
-    // the fly animation
     if (mode === 'fly') {
         hideElements();
         const style = document.createElement('style');

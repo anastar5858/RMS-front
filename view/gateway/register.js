@@ -9,7 +9,6 @@ const Register = (props) => {
     React.useEffect(() => {
         fetchLanguageData(setLanguageData);
     }, []);
-    // live validation of password here
     React.useEffect(() => {
         validatePassword(password, setPasswordValidator);
     }, [password]);
@@ -56,6 +55,5 @@ const Register = (props) => {
 }
 const registerRequestForwarder = (emailRef, passwordRef, event, passwordValidator, language, languageData) => {
     event.preventDefault();
-    // forward to client-side controller
     validateEmail(emailRef, passwordRef, passwordValidator, language, languageData);
 }

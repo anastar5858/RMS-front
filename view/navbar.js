@@ -11,7 +11,6 @@ const Navbar = (props) => {
     React.useEffect(() => {
         fetchLanguageData(setLanguageData);
     }, []);
-    // for hamburger menu displau
     const [hamburgerDisplay, setHamburgerDisplay] = React.useState(windowWidth < 630 ? true : false);
     React.useEffect(() => {
       sharedRegister = setregistered;
@@ -25,7 +24,6 @@ const Navbar = (props) => {
       }
     }, [registered]);
     React.useEffect(() => {
-      // registeration and log in update on navbar language change
       if (sharedLan !== undefined) {
         if (typeof sharedLan === 'function') {
           sharedLan(language);
@@ -45,7 +43,6 @@ const Navbar = (props) => {
           <i>{Object.keys(languageData).length > 0 ? languageData.navbar.logoText[language] : ''}</i>
          </figcaption>
         </picture>
-        {/* hamburger menu */}
         {hamburgerDisplay && (
         <div className="menudiv">
           <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label> 
@@ -88,7 +85,6 @@ const Navbar = (props) => {
           </menu>
         </div> 
         )}
-        {/* desktop view */}
         {!hamburgerDisplay && (
         <ul className='flex-row'>
         {verify && (
