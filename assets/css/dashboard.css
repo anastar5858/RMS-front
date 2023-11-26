@@ -25,9 +25,9 @@ textarea {
 #request-btn {
     text-align: center;
 }
-input[type="radio"] {
+/* input[type="radio"] {
     display: none;
-}
+} */
 #pen-check, #prog-check, #comp-check, #request-crawler, #photo-mode, #ar, #en {
     display: block;
 }
