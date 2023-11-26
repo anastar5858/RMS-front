@@ -16,9 +16,6 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
-#pen-check, #prog-check, #comp-check, #request-crawler, #photo-mode, #ar, #en {
-    display: block;
-}
 textarea {
     border-radius: 1rem;
     text-align: center;
@@ -28,9 +25,15 @@ textarea {
 #request-btn {
     text-align: center;
 }
-input[type="radio"] {
+input[type="checkbox"] {
     display: none;
   }
+input[type="radio"] {
+    display: none;
+}
+#pen-check, #prog-check, #comp-check, #request-crawler, #photo-mode, #ar, #en {
+    display: block;
+}
 .radio-container {
     display: inline-block;
     cursor: pointer;
