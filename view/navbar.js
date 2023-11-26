@@ -45,7 +45,7 @@ const Navbar = (props) => {
         </picture>
         {hamburgerDisplay && (
         <div className="menudiv">
-          <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label> 
+          <label id='menu-icon' htmlFor="menu-toggle" className="menu-icon">&#9776;</label> 
           <input type="checkbox" id="menu-toggle" className="checkbox-input" />
           <input type="checkbox" id="menu-toggle2" className="checkbox-input" />
           <label htmlFor="menu-toggle2" className="menu-icon">&#9776;</label>
