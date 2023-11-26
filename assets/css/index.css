@@ -146,7 +146,7 @@ button:hover {
 input[type="checkbox"] {
     display: none;
   }
-#checkBoxBlock {
+#checkBoxBlock1 #checkBoxBlock2, #checkBoxBlock3 {
   display: block;
 }
   .menu-icon {

@@ -21,15 +21,15 @@ const Register = (props) => {
             <strong>{Object.keys(languageData).length > 0 ? languageData.register.compliance[language] : ''}</strong>
             <li>
                 <mark id='pass-val-long'><strong>{Object.keys(languageData).length > 0 ? languageData.register.passwordRule1[language] : ''}</strong></mark>
-                <input id='checkBoxBlock' type='checkbox' disabled checked={passwordValidator.long ? true : false} style={{margin: '0.2rem auto 0 auto',}}></input>
+                <input id='checkBoxBlock1' type='checkbox' disabled checked={passwordValidator.long ? true : false} style={{margin: '0.2rem auto 0 auto',}}></input>
             </li>
             <li>
                 <mark id='pass-val-limit'><strong>{Object.keys(languageData).length > 0 ? languageData.register.passwordRule2[language] : ''}</strong></mark>
-                <input id='checkBoxBlock' type='checkbox' disabled checked={passwordValidator.chacractersLimit ? true : false} style={{margin: '0.2rem auto 0 auto',}}></input>
+                <input id='checkBoxBlock2' type='checkbox' disabled checked={passwordValidator.chacractersLimit ? true : false} style={{margin: '0.2rem auto 0 auto',}}></input>
             </li>
             <li>
                 <mark id='pass-val-sten'> <strong>{Object.keys(languageData).length > 0 ? languageData.register.passwordRule3[language] : ''}</strong></mark>
-                <input id='checkBoxBlock' type='checkbox' disabled checked={passwordValidator.startEndNo ? true : false} style={{margin: '0.2rem auto 0 auto',}}></input>
+                <input id='checkBoxBlock3' type='checkbox' disabled checked={passwordValidator.startEndNo ? true : false} style={{margin: '0.2rem auto 0 auto',}}></input>
             </li>
         </ul>
         <button id='regsiter-btn'onAnimationStart={() => {
