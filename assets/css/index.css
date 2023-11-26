@@ -50,7 +50,7 @@ body {
     transform: scaleX(-1);
   }
 /* general rules */
-/* details > summary {
+details > summary {
   padding: 0.2px;
   width: fit-content;
   background-color: #eeeeee;
@@ -60,7 +60,7 @@ body {
 }
 details > label {
   margin-top: 1rem;
-} */
+}
 a:hover, button:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -150,6 +150,7 @@ input[type="checkbox"] {
   display: block;
 }
   .menu-icon {
+    font-size: large;
     z-index: 2;
   }
   .menudiv {
