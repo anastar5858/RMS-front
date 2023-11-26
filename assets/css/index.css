@@ -143,12 +143,9 @@ button:hover {
 }
 
 /* reponsive media queries */
-#test {
-  background-color: green;
-}
-input[type="checkbox"] {
+/* input[type="checkbox"] {
     display: none;
-}
+} */
 #checkBoxBlock1, #checkBoxBlock2, #checkBoxBlock3 {
   display: block;
 }
