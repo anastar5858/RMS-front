@@ -132,7 +132,7 @@ mark {
 }
 /* id selectors rules */
 #pass-val-sten, #pass-val-long, #pass-val-limit  {
-    display: block;
+    display: block !important;
     animation: none;
 }
 /* animations section */
