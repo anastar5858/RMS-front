@@ -238,6 +238,10 @@ input[type="checkbox"] {
         box-shadow: inset -1rem -1rem 1rem 2rem rgb(245, 241, 241) !important;
         background-color: rgb(255, 253, 253) !important;
     }
+    .surface::before {
+      background: none !important;
+      display: none;
+    }
     .bullet {
         background-color: rgba(204, 192, 192, 0.356);
     }
