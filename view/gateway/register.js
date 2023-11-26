@@ -32,18 +32,17 @@ const Register = (props) => {
                 <input id='checkBoxBlock3' type='checkbox' disabled checked={passwordValidator.startEndNo ? true : false} style={{margin: '0.2rem auto 0 auto',}}></input>
             </li>
         </ul>
-        <button id='regsiter-btn'onAnimationStart={() => {
-            console.log('executed')
+        <button id='regsiter-btn'onAnimationStart={(e) => {
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
-            if (hamburgerMenu && hamburgerMenu2) {
+            if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {
                 hamburgerMenu.disabled = true;
                 hamburgerMenu2.disabled = true; 
             }
-        }} onAnimationEnd={() => {
+        }} onAnimationEnd={(e) => {
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
-            if (hamburgerMenu && hamburgerMenu2) {
+            if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {
                 hamburgerMenu.disabled = false;
                 hamburgerMenu2.disabled = false; 
                 hamburgerMenu.checked = false

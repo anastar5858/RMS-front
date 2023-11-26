@@ -80,7 +80,6 @@ picture {
     gap: 1rem;
 }
 input {
-    /* height: fit-content; */
     border-radius: 1rem;
     text-align: center;
     background: linear-gradient(rgb(255,250,250)
