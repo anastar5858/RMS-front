@@ -159,40 +159,39 @@ const Footer = () => {
             quizDropDown.current.addEventListener('change', quizEvent)
         })
 
-    }
-    
-        async function checkAnswer(e, event, previousResolve, elementId, target, quizEvent, step) {
-            if (e.currentTarget.value === event) {
-            quizMessage.current.textContent = 'Correct';
-            setTimeout(() => {
-                target.parentElement.classList.remove('position-relative')
-                quizMessage.current.textContent = '';
-                quizDropDown.current.parentElement.style.display = 'none';
-                quizDropDown.current.style.display = 'none';
-                quizMessage.current.style.display = 'none';
-                target.style.border = 'none';
-                quizDropDown.current.removeEventListener('change', quizEvent)
-                previousResolve(true);
-            }, 1000 * 1.5);
-            } else {
-            quizMessage.current.textContent = 'Incorrect';
-            setTimeout(async () => {
-                quizMessage.current.style.textContent = '';
-                quizDropDown.current.parentElement.style.display = 'none';
-                quizDropDown.current.style.display = 'none';
-                quizMessage.current.style.display = 'none';
-                let repeatStep;
-                repeatStep = await eventsHandler(elementId, event, step)
-                if (repeatStep === 'step finished') {
-                quizMessage.current.textContent = '';
-                target.style.border = 'none';
-                quizDropDown.current.parentElement.style.display = 'block';
-                quizDropDown.current.style.display = 'block';
-                quizMessage.current.style.display = 'block';
-                }
-            }, 1000 * 1.5)
+    }   
+    async function checkAnswer(e, event, previousResolve, elementId, target, quizEvent, step) {
+        if (e.currentTarget.value === event) {
+        quizMessage.current.textContent = 'Correct';
+        setTimeout(() => {
+            target.parentElement.classList.remove('position-relative')
+            quizMessage.current.textContent = '';
+            quizDropDown.current.parentElement.style.display = 'none';
+            quizDropDown.current.style.display = 'none';
+            quizMessage.current.style.display = 'none';
+            target.style.border = 'none';
+            quizDropDown.current.removeEventListener('change', quizEvent)
+            previousResolve(true);
+        }, 1000 * 1.5);
+        } else {
+        quizMessage.current.textContent = 'Incorrect';
+        setTimeout(async () => {
+            quizMessage.current.style.textContent = '';
+            quizDropDown.current.parentElement.style.display = 'none';
+            quizDropDown.current.style.display = 'none';
+            quizMessage.current.style.display = 'none';
+            let repeatStep;
+            repeatStep = await eventsHandler(elementId, event, step)
+            if (repeatStep === 'step finished') {
+            quizMessage.current.textContent = '';
+            target.style.border = 'none';
+            quizDropDown.current.parentElement.style.display = 'block';
+            quizDropDown.current.style.display = 'block';
+            quizMessage.current.style.display = 'block';
             }
+        }, 1000 * 1.5)
         }
+    }
     return (
         <>
             <button id='demo-btn' onClick={ () => setDemosVisualiser((prev) => !prev)} style={{bottom: '0', position: 'fixed', left: `${language === 'en' ? 0 : ''}`, right: `${language === 'ar' ? 0 : ''}`,}}> {!demosVisualiser ? Object.keys(languageData).length > 0 ? languageData.footer.helpBtbUnhide[language] : '' : Object.keys(languageData).length > 0 ? languageData.footer.helpBtbHide[language] : '' }</button>

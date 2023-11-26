@@ -17,7 +17,6 @@ const deleteDemo = async (demoName, btn, setDeleteIndicator) => {
         return btnErrorHandler('Server Error', 'success');
     }
 }
-
 const btnErrorHandlerDemos = (message, type, button, setDeleteIndicator) => {
     const currentText = button.textContent;
     button.disabled = true;

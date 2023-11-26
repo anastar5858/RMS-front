@@ -63,7 +63,6 @@ const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare,
             setIndexCounter(index < lengthToCompare ? index + 1 : index)    
         }
     }
-
     if (mode === 'default') {
         hideElements();
         cardContainer.current.style.animation = 'translateY 3s 1';
@@ -129,7 +128,6 @@ const animationHanlder = (mode, cardContainer, setIndexCounter, lengthToCompare,
         }, 2000);  
     }
 }
-
 const hideElements = () => {
     document.getElementById('request-title').style.visibility = 'hidden';
     document.getElementById('request-desc').style.visibility = 'hidden';
@@ -140,7 +138,6 @@ const hideElements = () => {
     const deleteBtn = document.getElementById('delete-request-btn');
     if (deleteBtn) deleteBtn.style.visibility = 'hidden';
 }
-
 const unhideElements = () => {
     document.getElementById('request-title').style.visibility = 'visible';
     document.getElementById('request-desc').style.visibility = 'visible';
@@ -151,7 +148,6 @@ const unhideElements = () => {
     const deleteBtn = document.getElementById('delete-request-btn');
     if (deleteBtn) deleteBtn.style.visibility = 'visible';
 }
-
 const disableNavigation = () => {
     document.getElementById('prev').disabled = true;
     document.getElementById('next').disabled = true;
@@ -159,7 +155,6 @@ const disableNavigation = () => {
     document.getElementById('fly').disabled = true;
     document.getElementById('rocket').disabled = true;
 }
-
 const enableNavigation = () => {
     document.getElementById('prev').disabled = false;
     document.getElementById('next').disabled = false; 

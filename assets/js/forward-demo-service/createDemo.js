@@ -29,7 +29,6 @@ const validateDemo = (title, url, demoElementsList) => {
     }
     sendToServerController(payload)
 }
-
 const sendToServerController = async (payload) => {
     const demoRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/create-demo', {
         method: 'POST',
@@ -50,8 +49,6 @@ const sendToServerController = async (payload) => {
         return btnErrorHandler('Server Error', 'success');
     }
 }
-
-
 const btnErrorHandler = (message, type) => {
     const registerBtn = document.getElementById('publish-demo-btn');
     const currentText = registerBtn.textContent;

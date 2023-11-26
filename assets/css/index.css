@@ -46,7 +46,7 @@ body {
     background-position: 100% 100%;
     background-size: 50% 100%;
     transform: scaleX(-1);
-  }
+}
 details > summary {
   padding: 0.2px;
   width: fit-content;
@@ -134,87 +134,86 @@ button:hover {
     background-size: 200% 100%;
     animation: buttonSmoothFill 1s infinite alternate !important;
 }
-
 input[type="checkbox"] {
     display: none;
 }
 #checkBoxBlock1, #checkBoxBlock2, #checkBoxBlock3 {
   display: block;
 }
-  .menu-icon {
-    font-size: large;
-    z-index: 2;
-  }
-  .menudiv {
-    display: block;
-    position: relative;
-  }
-  .menudiv input.checkbox-input, .menu-icon {
-    position: absolute;
-    top: 0;
-    right: 10%
-  }
-  .menu-icon {
-    cursor: pointer;
-  }
-  .menudiv:hover input.checkbox-input,
-  .menudiv:hover label.menu-icon {
-    pointer-events: auto;
-  }
-  
-  .the-menu > li {
-    text-decoration: none;
-    color: black;
-    margin: 20px 0;
-  }
-  #the-menu {
-    list-style-type: none;
-    min-width: fit-content;
-    max-width: 45vw;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  #menu-toggle:not(:checked) ~ #menu-toggle2:not(:checked) ~ .the-menu {
-    position: fixed;
-    top: 0%;
-    right: 0;
-    width: calc(100vw - 90vw);
-    height: 100vh;
-    z-index: 3;
-    display: flex;
-    visibility: hidden ;
-    flex-direction: column;
-    align-items: flex-end;
-    background-color: #DCDCDC;
-  } 
-  #menu-toggle2:checked ~ .the-menu {
-    position: fixed;
-    top: 6vh;
-    right: 0;
-    width: calc(100vw - 90vw);
-    height: 100vh;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #DCDCDC;
-    color: black;
-    animation: slideIn 0.5s linear forwards;
-  }
-  #menu-toggle2:checked {
-    display: none;
-  }
-  #menu-toggle2:checked + .menu-icon {
-    display: none;
-  }
-  #menu-toggle:checked ~ .the-menu {
-    animation: slideOut 0.5s linear forwards !important;
-  }
- #ar, #en {
+.menu-icon {
+  font-size: large;
+  z-index: 2;
+}
+.menudiv {
   display: block;
- }
+  position: relative;
+}
+.menudiv input.checkbox-input, .menu-icon {
+  position: absolute;
+  top: 0;
+  right: 10%
+}
+.menu-icon {
+  cursor: pointer;
+}
+.menudiv:hover input.checkbox-input,
+.menudiv:hover label.menu-icon {
+  pointer-events: auto;
+}
+
+.the-menu > li {
+  text-decoration: none;
+  color: black;
+  margin: 20px 0;
+}
+#the-menu {
+  list-style-type: none;
+  min-width: fit-content;
+  max-width: 45vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#menu-toggle:not(:checked) ~ #menu-toggle2:not(:checked) ~ .the-menu {
+  position: fixed;
+  top: 0%;
+  right: 0;
+  width: calc(100vw - 90vw);
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  visibility: hidden ;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: #DCDCDC;
+} 
+#menu-toggle2:checked ~ .the-menu {
+  position: fixed;
+  top: 6vh;
+  right: 0;
+  width: calc(100vw - 90vw);
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DCDCDC;
+  color: black;
+  animation: slideIn 0.5s linear forwards;
+}
+#menu-toggle2:checked {
+  display: none;
+}
+#menu-toggle2:checked + .menu-icon {
+  display: none;
+}
+#menu-toggle:checked ~ .the-menu {
+  animation: slideOut 0.5s linear forwards !important;
+}
+#ar, #en {
+  display: block;
+}
 @media only screen and (max-width: 630px) {
     body {
       font-size:small;

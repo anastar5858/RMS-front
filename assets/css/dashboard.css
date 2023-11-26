@@ -47,7 +47,7 @@ input[type="radio"] {
     left: 0;
     transition: background-color 0.3s ease;
     margin-left: 0.5rem;
-  }
+}
 #pending:checked + .radio-dot, #pending-manage + .radio-dot {
     background-color: #db6c34;
 }
@@ -185,34 +185,30 @@ small {
 }
 #ellipse::before,
 #ellipse::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 5vw;
-  height: 60vh;
-  border: 0.2rem solid black;
-  border-radius: 100%;
-  background-color: red; 
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 5vw;
+    height: 60vh;
+    border: 0.2rem solid black;
+    border-radius: 100%;
+    background-color: red; 
 }
-
 #ellipse::before {
     visibility: hidden;
     animation: wingPosition2 2s 1 forwards, 
     wingSwiftLeft 2s infinite forwards 1s;    
     left: -5vw;
-  }
-
-  #ellipse::after {
+}
+#ellipse::after {
     visibility: hidden;
     animation: wingPosition 2s 1 forwards, 
     wingSwiftRight 2s infinite forwards 1s;
     right: -20.5vw;
-  }
-
-
+}
 @media only screen and (max-width: 1234px) {
     #ellipse-plain, #ellipse, #ellipse-rocket {
         width: 30vw;
@@ -220,12 +216,11 @@ small {
     #ellipse::before { 
         animation: wingPosition3 2s 1 forwards, 
         wingSwiftLeft1 2s infinite forwards 1s; 
-      }
-    
-      #ellipse::after {
+    }
+    #ellipse::after {
         animation: wingPosition4 2s 1 forwards, 
         wingSwiftRight1 2s infinite forwards 1s; 
-      }
+    }
 }
 @media only screen and (max-width: 520px) {
     #ellipse-plain, #ellipse, #ellipse-rocket {
@@ -234,11 +229,9 @@ small {
     #ellipse::before { 
         animation: wingPosition5 2s 1 forwards, 
         wingSwiftLeft2 2s infinite forwards 1s; 
-      }
-    
-      #ellipse::after {
+    }
+    #ellipse::after {
         animation: wingPosition6 2s 1 forwards, 
         wingSwiftRight2 2s infinite forwards 1s; 
-      }
+    }
 }
-

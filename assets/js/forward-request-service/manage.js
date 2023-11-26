@@ -48,7 +48,6 @@ const fetchStatusRecord = async (setRequests, setCurrentRequest, setIndexCounter
         // todo: handle server error
     }
 }
-
 const updateRecordStatus = async (record, newStatus, setRequests, setCurrentRequest) => {
     const statusUpdateRequestRequest = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/update-request-status`, {
         method: 'PUT', 
@@ -82,7 +81,6 @@ const checkOwnership =  async (record, setIsOwner) => {
         // todo: handle server error
     }
 }
-
 const deleteRecord = async (record, setDeleteIndicator, btn) => {
     const deleteRequest = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/delete-record`, {
         method: 'DELETE',
@@ -102,7 +100,6 @@ const deleteRecord = async (record, setDeleteIndicator, btn) => {
         // todo: handle server error
     }
 }
-
 const btnErrorHandler = (message, type, button) => {
     const currentText = button.textContent;
     button.disabled = true;

@@ -6,7 +6,6 @@
         transform: translateX(0);
     } 
 }
-
 @keyframes validationY {
     0% {
         transform: translateY(0);
@@ -18,7 +17,6 @@
         transform: translateY(0);
     }
 }
-
 @keyframes slideIn {
     from {
       transform: translateX(100%);
@@ -26,17 +24,16 @@
     to {
       transform: translateX(0);
     }
-  }
-  @keyframes slideOut {
+}
+@keyframes slideOut {
     from {
       transform: translateX(0);
     }
     to {
       transform: translateX(100%);
     }
-  }
-
-  @keyframes buttonSmoothFill {
+}
+@keyframes buttonSmoothFill {
     0% {
         background-position: 0 0;
     }
@@ -44,16 +41,12 @@
         background-position: 100% 0;
     }
 }
-
-
-
 @keyframes translateY {
     100% {
         transform: translateY(150vh);
     }
 } 
-
- @keyframes wingPosition {
+@keyframes wingPosition {
     0% {
         transform: translateX(100vw);
     }
@@ -63,8 +56,8 @@
     100% {
         transform: translateX(25vw) rotate(90deg);
     }
-  }
-  @keyframes wingSwiftRight {
+}
+@keyframes wingSwiftRight {
     0% {
         transform: translateX(25vw) rotate(90deg);
     }
@@ -89,8 +82,8 @@
     100% {
         transform: translateX(25vw) rotate(110deg);
     }
-  }
-  @keyframes wingPosition2 {
+}
+@keyframes wingPosition2 {
     0% {
         transform: translateX(-100vw);
     }
@@ -100,8 +93,8 @@
     100% {
         transform: translateX(-5vw) rotate(-90deg);
     }
-  }
-  @keyframes wingSwiftLeft {
+}
+@keyframes wingSwiftLeft {
     0% {
         transform: translateX(-5vw) rotate(-90deg);
     }
@@ -126,9 +119,7 @@
     100% {
         transform: translateX(-5vw) rotate(-110deg);
     }
-  }
-
-  
+} 
 @keyframes wingPosition3 {
     0% {
         transform: translateX(100vw);
@@ -139,8 +130,8 @@
     100% {
         transform: translateX(30vw) rotate(90deg);
     }
-  }
-  @keyframes wingSwiftRight1 {
+}
+@keyframes wingSwiftRight1 {
     0% {
         transform: translateX(30vw) rotate(90deg);
     }
@@ -165,8 +156,8 @@
     100% {
         transform: translateX(30vw) rotate(110deg);
     }
-  }
-  @keyframes wingPosition4 {
+}
+@keyframes wingPosition4 {
     0% {
         transform: translateX(-100vw);
     }
@@ -176,8 +167,8 @@
     100% {
         transform: translateX(0vw) rotate(-90deg);
     }
-  }
-  @keyframes wingSwiftLeft1 {
+}
+@keyframes wingSwiftLeft1 {
     0% {
         transform: rotate(-90deg);
     }
@@ -202,8 +193,7 @@
     100% {
         transform: rotate(-110deg);
     }
-  }
-
+}
 @keyframes wingPosition5 {
     0% {
         transform: translateX(100vw);
@@ -214,8 +204,8 @@
     100% {
         transform: translateX(30vw) rotate(90deg);
     }
-  }
-  @keyframes wingSwiftRight2 {
+}
+@keyframes wingSwiftRight2 {
     0% {
         transform: translateX(70vw) rotate(90deg);
     }
@@ -240,8 +230,8 @@
     100% {
         transform: translateX(70vw) rotate(110deg);
     }
-  }
-  @keyframes wingPosition6 {
+}
+@keyframes wingPosition6 {
     0% {
         transform: translateX(-100vw);
     }
@@ -251,8 +241,8 @@
     100% {
         transform: translateX(0vw) rotate(-90deg);
     }
-  }
-  @keyframes wingSwiftLeft2 {
+}
+@keyframes wingSwiftLeft2 {
     0% {
         transform: rotate(-90deg);
     }
@@ -277,4 +267,4 @@
     100% {
         transform: rotate(-110deg);
     }
-  }
+}
