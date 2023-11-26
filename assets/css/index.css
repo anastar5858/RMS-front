@@ -143,9 +143,6 @@ button:hover {
 }
 
 /* reponsive media queries */
-/* input[type="checkbox"] {
-    display: none;
-} */
 #checkBoxBlock1, #checkBoxBlock2, #checkBoxBlock3 {
   display: block;
 }
