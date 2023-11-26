@@ -52,7 +52,6 @@ const Register = (props) => {
         onMouseEnter={(e) => e.currentTarget.style.animation = 'none'} 
         className='w-10 middle front primary-container' 
         style={{animation: `${props.animationIndicator === false ? 'btnTransition 3s 1 forwards' : 'default'}`}}>{Object.keys(languageData).length > 0 ? languageData.register.registerBtn[language] : ''}</button>
-        <mark id='test'> <strong>{Object.keys(languageData).length > 0 ? languageData.register.passwordRule3[language] : ''}</strong></mark>
     </form>
     )
 }
