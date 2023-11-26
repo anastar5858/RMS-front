@@ -50,7 +50,7 @@ body {
     transform: scaleX(-1);
   }
 /* general rules */
-details > summary {
+/* details > summary {
   padding: 0.2px;
   width: fit-content;
   background-color: #eeeeee;
@@ -91,7 +91,7 @@ ul > * {
 }
 mark {
     background-color: rgba(255, 232, 232, 0.356);  
-}
+} */
 /* class selectors rules  */
 .w-center {
     width: fit-content;
