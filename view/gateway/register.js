@@ -31,6 +31,7 @@ const Register = (props) => {
             </li>
         </ul>
         <button id='regsiter-btn'onAnimationStart={(e) => {
+            e.currentTarget.disabled = true;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
             if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {
@@ -38,6 +39,7 @@ const Register = (props) => {
                 hamburgerMenu2.disabled = true; 
             }
         }} onAnimationEnd={(e) => {
+            e.currentTarget.disabled = false;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
             if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {
