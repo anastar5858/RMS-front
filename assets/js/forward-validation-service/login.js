@@ -1,5 +1,7 @@
-const loginForwarder = async (emailInput, passwordInput, markErrElem, language, languageData) => {
-    const loginBtn = document.getElementById('login-btn');
+const loginForwarder = async (emailInput, passwordInput, markErrElem, language, languageData, loginBtn) => {
+    setTimeout(() => {
+        loginBtn.disabled = false;
+    }, 2000)
     loginBtn.textContent = Object.keys(languageData).length > 0 ? languageData.states.loading[language] : ''
     const payload = {
         email: emailInput.current.value,

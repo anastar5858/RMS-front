@@ -40,7 +40,6 @@ const Register = (props) => {
             }
         }} onAnimationEnd={(e) => {
             e.currentTarget.disabled = false;
-            e.currentTarget.style.animation = 'none'
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
             if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('none')) {

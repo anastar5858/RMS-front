@@ -22,7 +22,6 @@ const Login = (props) => {
             }
         }} onAnimationEnd={(e) => {
             e.currentTarget.disabled = false;
-            e.currentTarget.style.animation = 'none'
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
             if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('none')) {
@@ -31,8 +30,9 @@ const Login = (props) => {
                 hamburgerMenu.checked = false
             } 
         }} onClick={(e) => {
+            e.currentTarget.disabled = true;
             e.preventDefault();
-            loginForwarder(emailRef, passwordRef, statusMark, language, languageData);
+            loginForwarder(emailRef, passwordRef, statusMark, language, languageData, e.currentTarget);
         }} onMouseEnter={(e) => e.currentTarget.style.animation = 'none'} 
         className='w-10 middle front primary-container'  
         style={{animation: `${props.animationIndicator === true ? 'btnTransition 3s 1 forwards' : 'default'}`}}>{Object.keys(languageData).length > 0 ? languageData.login.loginBtn[language] : ''}</button>
