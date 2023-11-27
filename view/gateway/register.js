@@ -54,7 +54,10 @@ const Register = (props) => {
     </form>
     )
 }
-const registerRequestForwarder = (emailRef, passwordRef, event, passwordValidator, language, languageData) => {
+const registerRequestForwarder = (emailRef, passwordRef, event, passwordValidator, language, languageData, registerBtn) => {
+    setTimeout(() => {
+        registerBtn.disabled = false;
+    }, 2000)
     event.preventDefault();
     validateEmail(emailRef, passwordRef, passwordValidator, language, languageData);
 }

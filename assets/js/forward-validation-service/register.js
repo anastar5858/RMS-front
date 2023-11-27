@@ -1,7 +1,4 @@
-const validateEmail = (emailInput, passwordInput, passwordValidator, language, languageData, registerBtn) => {
-    setTimeout(() => {
-        registerBtn.disabled = false;
-    }, 2000)
+const validateEmail = (emailInput, passwordInput, passwordValidator, language, languageData) => {
     const email = emailInput.current.value.trim().toLowerCase();
     if (email === '') return uiEmailErrorHandler(languageData.errors.emailEmpty[language], emailInput, 'Empty Email');
     const re =
