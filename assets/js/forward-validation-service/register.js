@@ -1,4 +1,7 @@
 const validateEmail = (emailInput, passwordInput, passwordValidator, language, languageData) => {
+    setTimeout(() => {
+        loginBtn.disabled = false;
+    }, 2000)
     const email = emailInput.current.value.trim().toLowerCase();
     if (email === '') return uiEmailErrorHandler(languageData.errors.emailEmpty[language], emailInput, 'Empty Email');
     const re =
