@@ -42,7 +42,7 @@ const Register = (props) => {
             e.currentTarget.disabled = false;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
-            if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('none')) {
+            if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {
                 hamburgerMenu.disabled = false;
                 hamburgerMenu2.disabled = false; 
                 hamburgerMenu.checked = false
