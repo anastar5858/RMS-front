@@ -30,8 +30,8 @@ const Login = (props) => {
                 hamburgerMenu.checked = false
             } 
         }} onClick={(e) => {
-            e.currentTarget.disabled = true;
             e.preventDefault();
+            e.currentTarget.disabled = true;
             loginForwarder(emailRef, passwordRef, statusMark, language, languageData, e.currentTarget);
         }} onMouseEnter={(e) => e.currentTarget.style.animation = 'none'} 
         className='w-10 middle front primary-container'  
