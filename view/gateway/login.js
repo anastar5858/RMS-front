@@ -34,7 +34,7 @@ const Login = (props) => {
             e.currentTarget.disabled = true;
             loginForwarder(emailRef, passwordRef, statusMark, language, languageData, e.currentTarget);
         }} onMouseEnter={(e) => {
-            if (e.currentTarget.style.animation.includes('btnTransition')) e.currentTarget.disabled = true;
+            if (e.currentTarget.style.animation.includes('btnTransition')) e.currentTarget.disabled = false;
             e.currentTarget.style.animation = 'none';
         }} 
         className='w-10 middle front primary-container'  
