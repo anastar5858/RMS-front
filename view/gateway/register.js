@@ -59,7 +59,7 @@ const Register = (props) => {
 }
 const registerRequestForwarder = (emailRef, passwordRef, event, passwordValidator, language, languageData, registerBtn) => {
     event.preventDefault();
-    e.currentTarget.disabled = true;
+    registerBtn.disabled = true;
     setTimeout(() => {
         registerBtn.disabled = false;
     }, 2000);
