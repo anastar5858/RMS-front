@@ -13,7 +13,7 @@ const Login = (props) => {
         <input id='password-login' ref={passwordRef} className='w-30 middle front media-wide' type='password' placeholder={Object.keys(languageData).length > 0 ? languageData.login.passwordPlaceholder[language] : ''} />
         <mark id='login-status' ref={statusMark} style={{textAlign: 'center'}} className='front w-center'><strong>IDLE</strong></mark>
         <button id='login-btn' onAnimationStart={(e) => {
-            e.currentTarget.disabled = true;
+            if (e.currentTarget.style.animation.includes('btnTransition')) e.currentTarget.disabled = true;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
             if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {

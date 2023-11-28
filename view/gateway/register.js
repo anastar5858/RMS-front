@@ -32,7 +32,7 @@ const Register = (props) => {
         </ul>
         <button id='regsiter-btn'onAnimationStart={(e) => {
             console.log('animation started')
-            e.currentTarget.disabled = true;
+            if (e.currentTarget.style.animation.includes('btnTransition')) e.currentTarget.disabled = true;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
             if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {
