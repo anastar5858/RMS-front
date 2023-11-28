@@ -31,7 +31,6 @@ const Register = (props) => {
             </li>
         </ul>
         <button id='regsiter-btn'onAnimationStart={(e) => {
-            console.log('animation started')
             if (e.currentTarget.style.animation.includes('btnTransition')) e.currentTarget.disabled = true;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
@@ -40,7 +39,6 @@ const Register = (props) => {
                 hamburgerMenu2.disabled = true; 
             }
         }} onAnimationEnd={(e) => {
-            console.log('animation ended')
             e.currentTarget.disabled = false;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
@@ -57,9 +55,10 @@ const Register = (props) => {
     )
 }
 const registerRequestForwarder = (emailRef, passwordRef, event, passwordValidator, language, languageData, registerBtn) => {
+    event.preventDefault();
+    e.currentTarget.disabled = true;
     setTimeout(() => {
         registerBtn.disabled = false;
-    }, 2000)
-    event.preventDefault();
+    }, 2000);
     validateEmail(emailRef, passwordRef, passwordValidator, language, languageData);
 }
