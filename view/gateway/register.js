@@ -40,6 +40,7 @@ const Register = (props) => {
                 hamburgerMenu2.disabled = true; 
             }
         }} onAnimationEnd={(e) => {
+            console.log('animation ended')
             e.currentTarget.disabled = false;
             const hamburgerMenu = document.getElementById('menu-toggle2');
             const hamburgerMenu2 = document.getElementById('menu-toggle');
