@@ -49,6 +49,7 @@ const Register = (props) => {
             } 
         }} onClick={(e) => registerRequestForwarder(emailRef, passwordRef, e, passwordValidator, language, languageData, e.currentTarget)}
         onMouseEnter={(e) => {
+            console.log('why', e.currentTarget.style.animation)
             if (e.currentTarget.style.animation.includes('btnTransition')) e.currentTarget.disabled = true;
             e.currentTarget.style.animation = 'none';
         }}
