@@ -275,7 +275,10 @@ const ManageView = (props) => {
                             <input  onClick={() => setStatus('completed')} id='completed-manage' type='radio' value='Completed' name='status'></input>
                             <span className="radio-dot"></span> 
                         </label>
-                        {isOwner && (<button id='delete-request-btn' onClick={(e) => deleteRecord(currentRequest, setDeleteIndicator, e.currentTarget)}>Delete</button>)}
+                        {isOwner && (<button id='delete-request-btn' onClick={(e) => {
+                            resetPhotoFeature();
+                            deleteRecord(currentRequest, setDeleteIndicator, e.currentTarget)
+                        }}>Delete</button>)}
                     </strong>
                 </>
             )}

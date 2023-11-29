@@ -49,7 +49,16 @@ const Register = (props) => {
             } 
         }} onClick={(e) => registerRequestForwarder(emailRef, passwordRef, e, passwordValidator, language, languageData, e.currentTarget)}
         onMouseEnter={(e) => {
-            if (e.currentTarget.style.animation.includes('btnTransition')) e.currentTarget.disabled = false;
+            if (e.currentTarget.style.animation.includes('btnTransition')) {
+                e.currentTarget.disabled = false;
+                const hamburgerMenu = document.getElementById('menu-toggle2');
+                const hamburgerMenu2 = document.getElementById('menu-toggle');
+                if ((hamburgerMenu && hamburgerMenu2) && e.currentTarget.style.animation.includes('btnTransition')) {
+                    hamburgerMenu.disabled = false;
+                    hamburgerMenu2.disabled = false; 
+                    hamburgerMenu.checked = false
+                } 
+            }
             e.currentTarget.style.animation = 'none';
         }}
         className='w-10 middle front primary-container' 
