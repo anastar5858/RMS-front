@@ -1,6 +1,6 @@
 const deleteDemo = async (demoName, btn, setDeleteIndicator) => {
     const payload = {name: demoName};
-    const deleteRequest = await fetch(`https://octopus-app-jjuym.ondigitalocean.app/api/delete-demo`, {
+    const deleteRequest = await fetch(`https://urchin-app-ihhrv.ondigitalocean.app/api/delete-demo`, {
         method: 'DELETE',
         credentials: 'include',
         headers: {

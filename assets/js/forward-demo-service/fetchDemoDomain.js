@@ -1,5 +1,5 @@
 const getDemosOfDomain = async (domain, setAllDemosDomain) => {
-    const demosResponse = await fetch(`https://octopus-app-jjuym.ondigitalocean.app/api/fetch-demos-domain/${domain}`, {
+    const demosResponse = await fetch(`https://urchin-app-ihhrv.ondigitalocean.app/api/fetch-demos-domain/${domain}`, {
         method: 'GET',
         credentials: 'include',
     });

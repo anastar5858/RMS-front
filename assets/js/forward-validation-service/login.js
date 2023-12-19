@@ -7,7 +7,7 @@ const loginForwarder = async (emailInput, passwordInput, markErrElem, language, 
         email: emailInput.current.value,
         password: passwordInput.current.value,
     }
-    const loginRequest = await fetch('https://octopus-app-jjuym.ondigitalocean.app/api/login', {
+    const loginRequest = await fetch('https://urchin-app-ihhrv.ondigitalocean.app/api/login', {
         method: 'PATCH',
         credentials: 'include',
         headers: {

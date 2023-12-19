@@ -1,5 +1,5 @@
 const verifyToken = async (setVerify) => {
-    const verifyRequest = await fetch('https://octopus-app-jjuym.ondigitalocean.app/api/verify', {
+    const verifyRequest = await fetch('https://urchin-app-ihhrv.ondigitalocean.app/api/verify', {
         method: 'GET',
         credentials: 'include',
     });
