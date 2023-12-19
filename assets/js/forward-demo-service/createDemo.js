@@ -30,7 +30,7 @@ const validateDemo = (title, url, demoElementsList) => {
     sendToServerController(payload)
 }
 const sendToServerController = async (payload) => {
-    const demoRequest = await fetch('https://urchin-app-ihhrv.ondigitalocean.app/api/create-demo', {
+    const demoRequest = await fetch('https://squid-app-i93aj.ondigitalocean.app/api/create-demo', {
         method: 'POST',
         credentials: 'include',
         headers: {
