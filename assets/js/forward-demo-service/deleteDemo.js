@@ -1,6 +1,6 @@
 const deleteDemo = async (demoName, btn, setDeleteIndicator) => {
     const payload = {name: demoName};
-    const deleteRequest = await fetch(`https://squid-app-i93aj.ondigitalocean.app/api/delete-demo`, {
+    const deleteRequest = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/delete-demo`, {
         method: 'DELETE',
         credentials: 'include',
         headers: {

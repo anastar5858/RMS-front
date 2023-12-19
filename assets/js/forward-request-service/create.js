@@ -8,7 +8,7 @@ const validateRequestInput = async (titleInput, descriptionTextBox, initialStatu
         status: initialStatus,
         autoImg: checked,
     }
-    const createRequestRequest = await fetch('https://squid-app-i93aj.ondigitalocean.app/api/create-request', {
+    const createRequestRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/create-request', {
         method: 'POST',
         credentials: 'include',
         headers: {

@@ -1,5 +1,5 @@
 const logOut = async (setVerify, language) => {
-    const logOutRequest = await fetch('https://squid-app-i93aj.ondigitalocean.app/api/logout', {
+    const logOutRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/logout', {
         method: 'GET',
         credentials: 'include',
     });

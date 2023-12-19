@@ -1,5 +1,5 @@
 const verifyToken = async (setVerify) => {
-    const verifyRequest = await fetch('https://squid-app-i93aj.ondigitalocean.app/api/verify', {
+    const verifyRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/verify', {
         method: 'GET',
         credentials: 'include',
     });

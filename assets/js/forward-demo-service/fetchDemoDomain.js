@@ -1,5 +1,5 @@
 const getDemosOfDomain = async (domain, setAllDemosDomain) => {
-    const demosResponse = await fetch(`https://squid-app-i93aj.ondigitalocean.app/api/fetch-demos-domain/${domain}`, {
+    const demosResponse = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/fetch-demos-domain/${domain}`, {
         method: 'GET',
         credentials: 'include',
     });

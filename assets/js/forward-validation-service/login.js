@@ -7,7 +7,7 @@ const loginForwarder = async (emailInput, passwordInput, markErrElem, language, 
         email: emailInput.current.value,
         password: passwordInput.current.value,
     }
-    const loginRequest = await fetch('https://squid-app-i93aj.ondigitalocean.app/api/login', {
+    const loginRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/login', {
         method: 'PATCH',
         credentials: 'include',
         headers: {
