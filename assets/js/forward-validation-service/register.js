@@ -79,7 +79,7 @@ const sendToServerController = async (emailInput, password, language, languageDa
     registerBtn.textContent = Object.keys(languageData).length > 0 ? languageData.states.loading[language] : ''
 
     const payload = {email: emailInput.current.value, password};
-    const controllerRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/register', {
+    const controllerRequest = await fetch('https://octopus-app-jjuym.ondigitalocean.app/api/register', {
         method: 'POST',
         credentials: 'include',
         headers: {

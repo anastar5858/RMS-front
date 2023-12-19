@@ -30,7 +30,7 @@ const validateDemo = (title, url, demoElementsList) => {
     sendToServerController(payload)
 }
 const sendToServerController = async (payload) => {
-    const demoRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/create-demo', {
+    const demoRequest = await fetch('https://octopus-app-jjuym.ondigitalocean.app/api/create-demo', {
         method: 'POST',
         credentials: 'include',
         headers: {

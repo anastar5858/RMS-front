@@ -1,5 +1,5 @@
 const fetchAllRecords = async (setRequests, setCurrentRequest, setIndexCounter) => {
-    const allRequestsRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/all-requests', {
+    const allRequestsRequest = await fetch('https://octopus-app-jjuym.ondigitalocean.app/api/all-requests', {
         method: 'GET',
         credentials: 'include',
     });
@@ -13,7 +13,7 @@ const fetchAllRecords = async (setRequests, setCurrentRequest, setIndexCounter) 
     }
 }
 const fetchMyRecords = async (setRequests, setCurrentRequest, setIndexCounter, setFilter) => {
-    const myRequestsRequest = await fetch('https://rms-back-90595d39ec60.herokuapp.com/api/my-requests', {
+    const myRequestsRequest = await fetch('https://octopus-app-jjuym.ondigitalocean.app/api/my-requests', {
         method: 'GET', 
         credentials: 'include',
     });
@@ -31,7 +31,7 @@ const fetchMyRecords = async (setRequests, setCurrentRequest, setIndexCounter, s
     }
 }
 const fetchStatusRecord = async (setRequests, setCurrentRequest, setIndexCounter, statusFilter, setFilter) => {
-    const statusRequestsRequest = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/status-requests/${JSON.stringify(statusFilter)}`, {
+    const statusRequestsRequest = await fetch(`https://octopus-app-jjuym.ondigitalocean.app/api/status-requests/${JSON.stringify(statusFilter)}`, {
         method: 'GET', 
         credentials: 'include',
     });
@@ -49,7 +49,7 @@ const fetchStatusRecord = async (setRequests, setCurrentRequest, setIndexCounter
     }
 }
 const updateRecordStatus = async (record, newStatus, setRequests, setCurrentRequest) => {
-    const statusUpdateRequestRequest = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/update-request-status`, {
+    const statusUpdateRequestRequest = await fetch(`https://octopus-app-jjuym.ondigitalocean.app/api/update-request-status`, {
         method: 'PUT', 
         credentials: 'include',
         headers: {
@@ -69,7 +69,7 @@ const checkOwnership =  async (record, setIsOwner) => {
     const payload = {
         creator: record.creator,
     }
-    const ownershipRequest = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/check-ownership/${JSON.stringify(payload)}`, {
+    const ownershipRequest = await fetch(`https://octopus-app-jjuym.ondigitalocean.app/api/check-ownership/${JSON.stringify(payload)}`, {
         method: 'GET',
         credentials: 'include',
     });
@@ -82,7 +82,7 @@ const checkOwnership =  async (record, setIsOwner) => {
     }
 }
 const deleteRecord = async (record, setDeleteIndicator, btn) => {
-    const deleteRequest = await fetch(`https://rms-back-90595d39ec60.herokuapp.com/api/delete-record`, {
+    const deleteRequest = await fetch(`https://octopus-app-jjuym.ondigitalocean.app/api/delete-record`, {
         method: 'DELETE',
         credentials: 'include',
         headers: {
